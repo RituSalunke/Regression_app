@@ -16,12 +16,12 @@ def convert_for_download(df):
 
 @st.cache_data
 def get_model():
-    sex_encoder = joblib.load(r"D:\train_project\lcoder_sex.joblib")
-    smoker_encoder  = joblib.load(r"D:\train_project\lcoder_smoker.joblib")
-    region_encoder  = joblib.load(r"D:\train_project\lcoder_region.joblib")
+    sex_encoder = joblib.load("lcoder_sex.joblib")
+    smoker_encoder  = joblib.load("lcoder_smoker.joblib")
+    region_encoder  = joblib.load("lcoder_region.joblib")
 
-    scaler = joblib.load(r"D:\train_project\standard_scaler.joblib")
-    model = joblib.load(r"D:\train_project\trained_liner_model.joblib")
+    scaler = joblib.load("standard_scaler.joblib")
+    model = joblib.load("trained_liner_model.joblib")
     return sex_encoder, smoker_encoder, region_encoder , scaler, model
 sex_encoder, smoker_encoder, region_encoder, scaler, model = get_model()
 
@@ -177,3 +177,4 @@ with tab2:
     #    upload_df["Predicted_" + Y] = prediction
 #
 #    st.dataframe(upload_df)
+
