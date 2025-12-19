@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-#import joblib
+import joblib
 import numpy as np
 import os
 
@@ -177,5 +177,6 @@ with tab2:
     #    upload_df["Predicted_" + Y] = prediction
 #
 #    st.dataframe(upload_df)
+
 
 
